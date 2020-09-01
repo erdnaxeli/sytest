@@ -364,7 +364,7 @@ sub _await_ready_notification
       # We add a timeout so that we don't wait for ever if process wedges.
       Future->wait_any(
          $poke_fut,
-         $loop->timeout_future( after => 15 )
+         $loop->timeout_future( after => 60 )
       )
    })
 }
